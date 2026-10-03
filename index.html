@@ -1,1 +1,299 @@
-soon b2tw
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="mailru-domain" content="AXOv84zw41VgAPi0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BactToThisWorld // ERROR</title>
+<meta name="description" content="BactToThisWorld — психологический хоррор. Система сообщает, что всё в порядке. Не верьте ей.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#050505;color:#b8b8b8;
+  font:14px/1.55 "Courier New",monospace;
+  overflow-x:hidden;
+  cursor:crosshair;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:99;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 4px);
+  mix-blend-mode:screen;
+}
+body:after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:98;
+  background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.75) 100%);
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  border-bottom:1px dashed #292929;
+  background:#050505ee;
+}
+nav{height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{
+  color:#d0d0d0;font-weight:bold;letter-spacing:1px;
+  text-shadow:2px 0 #66252a,-1px 0 #344a59;
+}
+.logo .bad{color:#6f252a}
+nav div{display:flex;gap:22px;font-size:12px;color:#707070}
+nav a:hover{color:#ddd;text-decoration:line-through}
+.status{font-size:10px;color:#59645b}
+.status i{
+  display:inline-block;width:6px;height:6px;background:#5b6f5b;
+  border-radius:50%;margin-right:6px;animation:blink 1.4s infinite
+}
+.hero{
+  min-height:100vh;position:relative;display:flex;align-items:center;
+  background:
+    linear-gradient(90deg,transparent 49.8%,#191919 50%,transparent 50.2%),
+    linear-gradient(#090909,#030303);
+}
+.hero .wrap{padding-top:80px}
+.warning{
+  display:inline-block;border:1px solid #4c2528;padding:5px 9px;
+  color:#88464a;font-size:10px;transform:rotate(-.7deg)
+}
+h1{
+  margin:28px 0 0;
+  font-size:clamp(52px,9vw,112px);
+  line-height:.8;letter-spacing:-7px;
+  color:#c7c7c7;
+  position:relative;
+  animation:distort 5s infinite;
+}
+h1:before,h1:after{
+  content:"BactToThisWorld";position:absolute;left:2px;top:0;
+  opacity:.35;clip-path:inset(45% 0 45% 0)
+}
+h1:before{color:#8b3035;transform:translateX(-3px)}
+h1:after{color:#415a6c;transform:translateX(3px)}
+.subtitle{max-width:650px;color:#777;font-size:16px;margin:30px 0}
+.terminal{
+  max-width:720px;border:1px solid #242424;background:#070707;
+  padding:18px;color:#696969;box-shadow:8px 8px 0 #0c0c0c;
+}
+.terminal .red{color:#874047}.terminal .green{color:#667b68}.terminal .white{color:#aaa}
+.buttons{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}
+.btn{
+  padding:10px 15px;border:1px solid #303030;background:#0b0b0b;
+  color:#999;font-family:inherit;font-size:12px
+}
+.btn:hover{background:#151515;color:#ddd;border-color:#555}
+.btn.danger{color:#a15b5f;border-color:#542a2d}
+.corner{
+  position:absolute;right:7%;bottom:12%;color:#303030;
+  font-size:10px;transform:rotate(3deg)
+}
+section{padding:100px 0;border-top:1px dashed #202020;position:relative}
+.eyebrow{font-size:10px;color:#5e6e78;letter-spacing:2px}
+h2{
+  font-size:clamp(32px,5vw,58px);line-height:.95;
+  letter-spacing:-3px;margin:12px 0 22px;color:#c2c2c2
+}
+.lead{max-width:760px;color:#777;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.card{
+  min-height:190px;border:1px solid #242424;padding:22px;
+  background:#080808;position:relative
+}
+.card:nth-child(2){transform:translateY(9px) rotate(.2deg)}
+.card:nth-child(5){transform:translateY(-7px)}
+.num{color:#4e5960;font-size:10px}
+.card h3{font-size:16px;color:#a9a9a9;margin:20px 0 8px}
+.card p{color:#686868;margin:0}
+.card:after{
+  content:"";position:absolute;right:8px;top:8px;width:5px;height:5px;
+  background:#343434
+}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story p{color:#777}
+.quote{
+  border-left:1px solid #71373b;background:#0a0909;padding:18px;
+  color:#999;margin-top:25px;transform:rotate(-.3deg)
+}
+.broken{
+  height:430px;border:1px solid #252525;position:relative;overflow:hidden;
+  background:#090909;
+}
+.broken:before{
+  content:"";position:absolute;left:8%;right:8%;top:25%;height:1px;
+  background:#383838;box-shadow:0 70px #242424,0 140px #1d1d1d,0 210px #292929
+}
+.broken:after{
+  content:"404 / REALITY_NOT_FOUND";
+  position:absolute;top:48%;left:15%;color:#3b3b3b;font-size:12px;
+  transform:rotate(-5deg)
+}
+.errorbox{
+  position:absolute;left:18%;top:16%;border:1px solid #472528;
+  background:#0d0809;padding:10px;color:#713a3e;font-size:10px;
+  transform:rotate(2deg)
+}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:35px}
+.feature{border:1px dashed #252525;padding:22px;background:#070707}
+.feature strong{color:#aaa;font-size:15px}
+.feature p{color:#686868;margin:8px 0 0}
+.screens{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:170px;gap:10px;margin-top:35px}
+.screen{
+  border:1px solid #222;background:#090909;position:relative;overflow:hidden
+}
+.screen:before{
+  content:"SIGNAL LOST";position:absolute;left:12px;bottom:10px;
+  color:#383838;font-size:9px;letter-spacing:2px
+}
+.screen:first-child{grid-row:span 2}
+.screen:nth-child(2){transform:translate(4px,-5px)}
+.screen:nth-child(4){transform:translate(-3px,4px)}
+.devline{
+  max-width:700px;margin-top:30px;border:1px solid #242424;padding:18px;
+  color:#666
+}
+.bar{height:7px;border:1px solid #262626;margin-top:13px;background:#090909}
+.bar span{display:block;width:43%;height:100%;background:#58666d;position:relative}
+.bar span:after{content:"";position:absolute;right:-1px;top:-3px;width:3px;height:11px;background:#8b3c41}
+.cta{text-align:center;min-height:430px;display:flex;align-items:center}
+.cta h2{max-width:850px;margin:15px auto}
+.cta p{color:#686868;max-width:600px;margin:0 auto 25px}
+.footerline{color:#4d4d4d;font-size:10px}
+footer{border-top:1px dashed #202020;padding:25px 0 40px}
+.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@keyframes blink{0%,48%{opacity:1}49%,100%{opacity:.15}}
+@keyframes distort{
+  0%,92%,100%{transform:translate(0)}
+  93%{transform:translate(-2px,1px)}
+  94%{transform:translate(3px,0)}
+  95%{transform:translate(-1px,-1px)}
+}
+@media(max-width:800px){
+  nav div{display:none}.status{font-size:9px}
+  .grid,.story,.features{grid-template-columns:1fr}
+  .screens{grid-template-columns:1fr;grid-auto-rows:180px}
+  .screen:first-child{grid-row:auto}
+  h1{letter-spacing:-4px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav>
+<a class="logo" href="#top">B2TW<span class="bad">.ONLINE</span> // <span id="clock">00:00:00</span></a>
+<div>
+<a href="#game">[ИГРА]</a>
+<a href="#features">[ОШИБКИ]</a>
+<a href="#story">[ИСТОРИЯ]</a>
+<a href="#media">[ФАЙЛЫ]</a>
+</div>
+<div class="status"><i></i>SYSTEM ONLINE</div>
+</nav></div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap">
+<div class="warning">WARNING // НЕ ДОВЕРЯЙТЕ ЭТОМУ САЙТУ</div>
+<h1>BactToThisWorld</h1>
+<p class="subtitle">Линейный психологический хоррор от первого лица. Вы пришли на работу. По крайней мере, так система утверждает.</p>
+<div class="terminal">
+<span class="green">C:\B2TW&gt;</span> run_game.exe<br>
+<span class="white">Loading environment...</span> <span class="green">OK</span><br>
+<span class="white">Loading employees...</span> <span class="red">ERROR</span><br>
+<span class="white">Loading memory...</span> <span class="red">ACCESS DENIED</span><br>
+<span class="white">Loading reality...</span> <span class="red">NOT FOUND</span><br>
+<span class="green">C:\B2TW&gt;</span> <span class="white">_</span>
+</div>
+<div class="buttons">
+<a class="btn danger" href="#game">ОТКРЫТЬ ФАЙЛ</a>
+<a class="btn" href="#media">ПОСМОТРЕТЬ СКРИНШОТЫ</a>
+</div>
+<div class="small">file://B2TW_ONLINE/index.html // session_id: UNKNOWN</div>
+</div>
+<div class="corner">DON'T LOOK BEHIND YOU</div>
+</section>
+
+<section id="game"><div class="wrap">
+<div class="eyebrow">FILE_001 / GAME.EXE</div>
+<h2>Сначала это просто работа.</h2>
+<p class="lead">BactToThisWorld — психологический хоррор, в котором обычная офисная рутина постепенно превращается в нечто, чему невозможно дать нормальное объяснение.</p>
+<div class="story">
+<div>
+<p>Вы играете за Анастасию — сотрудницу офиса МЧС. Новый день, новая должность, документы, компьютер, коллеги и обычные поручения.</p>
+<p>Сначала всё работает именно так, как должно. Затем появляются мелкие несоответствия. Люди знают то, чего знать не должны. Знакомые помещения становятся другими. Некоторые воспоминания начинают противоречить друг другу.</p>
+<p>И чем дальше вы пытаетесь разобраться, тем сильнее возникает вопрос: <b>а действительно ли проблема находится в этом здании?</b></p>
+<div class="quote">ERROR: невозможно определить, какая версия воспоминаний является исходной.</div>
+</div>
+<div class="broken"><div class="errorbox">SYSTEM MESSAGE<br>EMPLOYEE: ANASTASIA<br>STATUS: ACTIVE<br>LAST SEEN: UNKNOWN</div></div>
+</div>
+</div></section>
+
+<section id="features"><div class="wrap">
+<div class="eyebrow">CORRUPTED_DATA</div>
+<h2>Особенности, которые лучше не проверять.</h2>
+<div class="grid">
+<div class="card"><div class="num">ERR_01</div><h3>Психологический хоррор</h3><p>Страх появляется из сомнения. Игра постоянно заставляет задаваться вопросом, можно ли доверять увиденному.</p></div>
+<div class="card"><div class="num">ERR_02</div><h3>Интерактивное окружение</h3><p>Компьютеры, документы, двери, шкафы и обычные предметы становятся частью истории.</p></div>
+<div class="card"><div class="num">ERR_03</div><h3>Линейная история</h3><p>Все события связаны одной последовательной историей, которая постепенно раскрывает происходящее.</p></div>
+<div class="card"><div class="num">ERR_04</div><h3>Привычное место</h3><p>Офис выглядит знакомо. Именно поэтому любое изменение в нём становится заметным.</p></div>
+<div class="card"><div class="num">ERR_05</div><h3>Первое лицо</h3><p>Никакого безопасного взгляда со стороны. Вы находитесь внутри происходящего.</p></div>
+<div class="card"><div class="num">ERR_06</div><h3>Мир ломается</h3><p>Звуки, пространство, документы и персонажи постепенно перестают работать по привычным правилам.</p></div>
+</div>
+</div></section>
+
+<section id="story"><div class="wrap">
+<div class="eyebrow">MEMORY.DAT / DAMAGED</div>
+<h2>Один офис. Несколько версий реальности.</h2>
+<p class="lead">История начинается с самых обычных задач и постепенно превращает знакомое пространство в источник постоянного недоверия.</p>
+<div class="features">
+<div class="feature"><strong>[01] РАБОТА</strong><p>Работайте за компьютером, оформляйте документы, ищите папки и выполняйте поручения.</p></div>
+<div class="feature"><strong>[02] ЛЮДИ</strong><p>Разговаривайте с коллегами и наблюдайте за тем, как меняется их поведение.</p></div>
+<div class="feature"><strong>[03] ПРОСТРАНСТВО</strong><p>Возвращайтесь в знакомые места и замечайте, что некоторые вещи больше не совпадают с памятью.</p></div>
+<div class="feature"><strong>[04] ПРАВДА</strong><p>Собирайте разрозненные детали и решайте, какой версии происходящего вообще можно верить.</p></div>
+</div>
+</div></section>
+
+<section id="media"><div class="wrap">
+<div class="eyebrow">/MEDIA / ACCESS: PARTIAL</div>
+<h2>Файлы повреждены.</h2>
+<p class="lead">Некоторые изображения недоступны. Возможно, это временная ошибка.</p>
+<div class="screens">
+<div class="screen"></div><div class="screen"></div><div class="screen"></div><div class="screen"></div><div class="screen"></div>
+</div>
+</div></section>
+
+<section id="dev"><div class="wrap">
+<div class="eyebrow">BUILD_2026 / UNKNOWN</div>
+<h2>Игра находится в разработке.</h2>
+<p class="lead">Персонажи, окружение, интерактивные системы и сюжет создаются постепенно.</p>
+<div class="devline">
+BUILD STATUS: <span style="color:#718374">RUNNING</span><br>
+PROJECT: BACTTOTHISWORLD<br>
+ENGINE: UNITY<br>
+WARNING COUNT: <span style="color:#914247">████████████████ 17</span>
+<div class="bar"><span></span></div>
+</div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+<div class="eyebrow">FINAL_MESSAGE.TXT</div>
+<h2>Ты уверен, что пришёл сюда впервые?</h2>
+<p>Если сайт снова откроется сам — не закрывай его сразу. Возможно, он пытается тебе что-то показать.</p>
+<a class="btn danger" href="#top">ПЕРЕЗАПУСТИТЬ</a>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+<div class="footerline">B2TW.ONLINE // BactToThisWorld // © 2026</div>
+<div class="footerline">SYSTEM STATUS: <span style="color:#647466">STABLE*</span></div>
+<div class="footerline">Все совпадения с реальными местами, личностями и фактами случайны. Данный текст не рекомендуется к прочтению лицам младше 18 лет.</div>
+</div></footer>
+
+<script>
+function tick(){
+ const d=new Date();
+ document.getElementById("clock").textContent=d.toLocaleTimeString("ru-RU",{hour12:false});
+}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
